@@ -1,0 +1,58 @@
+INPUT
+#include<iostream>
+using namespace std;
+class student
+{  public:
+   int roll_no;
+   char name[20];
+   void putdata()
+       {
+         cout<<"enter the value of roll no:"<<endl;
+         cin>>roll_no;
+         cout<<"enter the name:"<<endl;
+         cin>>name;
+       }
+       void getdata()
+       {
+         cout<<"roll no is:"<<roll_no<<endl;
+         cout<<"Your name is:"<<name<<endl;
+       }
+};
+   int main()
+    { student s[4];
+      int i;
+      for(i=0;i<4;i++)
+      { s[i].putdata();
+      }
+      for(i=0;i<4;i++)
+      {
+      s[i].getdata();
+      }
+    return 0;
+}
+
+OUTPUT
+enter the value of roll no:
+3
+enter the name:
+roshani
+enter the value of roll no:
+4
+enter the name:
+riya
+enter the value of roll no:
+5
+enter the name:
+usha
+enter the value of roll no:
+7
+enter the name:
+sau
+roll no is:3
+Your name is:roshani
+roll no is:4
+Your name is:riya
+roll no is:5
+Your name is:usha
+roll no is:7
+Your name is:sau
