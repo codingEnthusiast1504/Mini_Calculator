@@ -1,0 +1,47 @@
+
+INPUT
+#include <iostream>
+using namespace std; 
+class calculation
+{ 
+int a,b;
+public:
+calculation()
+{
+    cout<<"enter the value of a:"<<endl;
+    cin>>a;
+    cout<<"enter the value of b:"<<endl;
+    cin>>b;
+}
+    friend class addition;
+};
+class addition
+{   public:
+    void add_mem(calculation& t)
+   {
+     int add,sub,mul,divi,a,b;
+     add=t.a+t.b;
+     sub=t.a-t.b;
+     mul=t.a*t.b;
+     divi=t.a/t.b;
+     cout<<"ADDITION:"<<add<<endl;
+     cout<<"SUBTRACION:"<<sub<<endl;
+     cout<<"MULTIPLICATION:"<<mul<<endl;
+     cout<<"DIVISION:"<<divi;
+   }
+};
+int main()
+{  calculation t;
+   addition a;
+   a.add_mem(t);
+   return 0;
+}
+OUTPUT
+enter the value of a:
+77
+enter the value of b:
+14
+ADDITION:91
+SUBTRACION:63
+MULTIPLICATION:1078
+DIVISION:5
