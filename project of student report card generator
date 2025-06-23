@@ -1,0 +1,309 @@
+#STUDENT REPORT CARD GENRATOR SYSTEM#
+#include <iostream>
+#include <iomanip>
+using namespace std;
+class student {
+public:
+intpco,blp,mgt,pwp,mad,eti,bee,pic,wpd,roll_no,oop,gui,dsu,dms,cgr,jp,cpp,evs,os,ajp,st,nis,dwmt,se,dc,mp,dte,eng,sci,math,ict,m2;
+    float per, per1, per2, per3, per4,per5;
+    
+    char name[30];
+
+    void open();
+    void display();
+    void search(int);
+};
+
+void student::open() {
+    cout << "ENTER YOUR NAME           :  ";
+    cin >> name;
+    cout << "ENTER YOUR ROLL NUMBER :  ";
+    cin >> roll_no;
+    cout << "\n\t\tSUCCESSFULLY STUDENT CREATED ";
+}
+
+void student::display() {
+    cout << "\nNAME     : " << name;
+    cout << "\nROLL NO : " << roll_no;
+    cout << "\nPERCENTAGE OF SEM 1 IS  : " << per;
+    cout << "\nPERCENTAGE OF SEM 2 IS  : " << per1;
+    cout << "\nPERCENTAGE OF SEM 3 IS  : " << per2;
+    cout << "\nPERCENTAGE OF SEM 4 IS  : " << per3;
+    cout << "\nPERCENTAGE OF SEM 5 IS  : " << per4;
+    cout << "\nPERCENTAGE OF SEM 6 IS  : " << per5;
+}
+
+void student::search(int m) {
+    if (roll_no == m) {
+        cout << "\n\n** STUDENT REPORT CARD **";
+        cout << "\nNAME   : " << name;
+        cout << "\nROLL NO: " << roll_no;
+        cout << "\nPERCENTAGE IS   : " << per;
+    } else {
+        cout << "\nYour Roll no is Wrong:";
+    }
+}
+
+class Entry : public student {
+public:
+    void entry(int);
+    void entry1(int);
+    void entry2(int);
+    void entry3(int);
+    void entry4(int);
+    void entry5(int);
+};
+
+void Entry::entry(int j) {
+    if (roll_no == j) {
+        
+        cout << "Enter the marks of ENGLISH: ";
+        cin >> eng;
+        cout << "Enter the marks of BASIC SCIENCE: ";
+        cin >> sci;
+        cout << "Enter the marks of MATHS: ";
+        cin >> math;
+        cout << "Enter the marks of ICT: ";
+        cin >> ict;
+        per = (eng + sci + math + ict) / 4;
+        cout << "\nYour Percentage is : " << per;
+        if (per > 40)
+            cout << "\nYou are pass!!" << endl;
+        else
+            cout << "\nYou are fail !!" << endl;
+    } else {
+        cout << "\nWrong roll no:";
+    }
+}
+
+void Entry::entry1(int j) {
+    if (roll_no == j) {
+        
+        cout << "Enter the marks of M2: ";
+        cin >> m2;
+        cout << "Enter the marks of BEE: ";
+        cin >> bee;
+        cout << "Enter the marks of WPD: ";
+        cin >> wpd;
+        cout << "Enter the marks of PIC: ";
+        cin >> pic;
+        cout << "Enter the marks of BLP: ";
+        cin >> blp;
+        cout << "Enter the marks of PCO: ";
+        cin >> pco;
+        per1 = (m2 + bee + wpd + pic + blp + pco) / 6;
+        cout << "\nYour Percentage is : " << per1;
+        if (per1 > 40)
+            cout << "\nYou are pass!!" << endl;
+        else
+            cout << "\nYou are fail !!" << endl;
+    } else {
+        cout << "\nWrong no";
+    }
+}
+
+void Entry::entry2(int j) {
+    if (roll_no == j) {
+        cout << "Enter the marks of OOP: ";
+        cin >> oop;
+        cout << "Enter the marks of DTE: ";
+        cin >> dte;
+        cout << "Enter the marks of DSU: ";
+        cin >> dsu;
+        cout << "Enter the marks of DMS: ";
+        cin >> dms;
+        cout << "Enter the marks of CGR: ";
+        cin >> cgr;
+        per2 = (oop + dte + dsu + dms + cgr) / 5;
+        cout << "\nYour Percentage is : " << per2;
+        if (per2 > 40)
+            cout << "\nYou are pass!!" << endl;
+        else
+            cout << "\nYou are fail !!" << endl;
+    } else {
+        cout << "\nWrong roll no";
+    }
+}
+
+void Entry::entry3(int j) {
+    if (roll_no == j) {
+        cout << "Enter the marks of GUI: "; //Gui Application Development Using Vb.Net
+        cin >> gui;
+        cout << "Enter the marks of JP : "; // Software Engineering	
+        cin >> jp;
+        cout << "Enter the marks of SE: "; // Software Engineering	
+        cin >> se;
+        cout << "Enter the marks of DC: ";  // Data Communication and Computer Network
+        cin >> dc;
+        cout << "Enter the marks of MP: "; // Microprocessors
+        cin >> mp;
+        per3 = (gui + jp + se + dc + mp) / 5;
+        cout << "\nYour Percentage is : " << per3;
+        if (per3 > 40)
+            cout << "\nYou are pass!!" << endl;
+        else
+            cout << "\nYou are fail !!" << endl;
+    } else {
+        cout << "\nWrong no:";
+    }
+}
+
+void Entry::entry4(int j) {
+    if (roll_no == j) {
+        cout << "Enter the marks of CPP: ";  //Capstone Project Planning
+        cin >> cpp;
+        cout << "Enter the marks of EVS: "; // Environmental Studies
+        cin >> evs;
+        cout << "Enter the marks of OS: "; //Operating Systems
+        cin >> os;
+        cout << "Enter the marks of AJP: "; //Advanced Java Programming
+        cin >> ajp;
+        cout << "Enter the marks of ST: ";  //Software Testing
+        cin >> st;
+        
+      
+        per4 = (cpp + evs + os + ajp + st  ) / 5;
+        cout << "\nYour Percentage is : " << per4;
+        if (per4 > 40)
+            cout << "\nYou are pass!!" << endl;
+        else
+            cout << "\nYou are fail !!" << endl;
+    } else {
+        cout << "\nWrong no:";
+    }
+}
+
+void Entry::entry5(int j) {
+    if (roll_no == j) {
+        cout << "Enter the marks of MGT: "; //managment 
+        cin >> mgt;
+        cout << "Enter the marks of PWP: ";  //Programming with python
+        cin >> pwp;
+        cout << "Enter the marks of MAD: ";//Mobile Application Development  
+        cin >> mad;
+        cout << "Enter the marks of  ETI: ";// Emerging Trends in Computer and Information Technolgy 
+        cin >> eti;
+        
+       
+        per5 = (mgt + pwp + mad + eti ) / 4;
+        cout << "\nYour Percentage is : " << per5;
+        if (per5 > 40)
+            cout << "\nYou are pass!!" << endl;
+        else
+            cout << "\nYou are fail !!" << endl;
+    } else {
+        cout << "\nWrong no:";
+    }
+}
+
+int main() {
+    int i, j, k, m, l, y = 0;
+    Entry b[20];
+    int choice;
+
+    cout << "\t\t--------------------------------------------------" << endl;
+    cout << "\t\t ||----STUDENT REPORT CARD GENERATOR SYSTEM----||" << endl;
+    cout << "\t\t--------------------------------------------------" << endl;
+
+    cout << "\n\nMade by: ";
+    cout << "\n\tPRUTHVIRAJ CHAUDHARI,  (SYCO)";
+    cout << "\n\tPRIYA PATIL, (SYCO)";
+    cout << "\n\tROSHANI PAWAR (SYCO)";
+    cout << "\n\tNITIN PATIL (SYCO)";
+    cout << "\n\n\t\t\t   Press Enter to enter the menu";
+    cin.ignore(); // Wait for user input
+
+    do {
+        cout << "\n\nPRESS 1 to -ADD STUDENT-\n";
+        cout << "PRESS 2 to -MARKS ENTRY-\n";
+        cout << "PRESS 3 to -DISPLAY STUDENT REPORT CARD- \n";
+        cout << "PRESS 4 to -SEARCH STUDENT INFO- \n";
+        cout << "PRESS 5 to -EXIT- \n";
+        cout << "......Enter Your option......";
+
+        cin >> choice;
+        int ch;
+        switch (choice) {
+            case 1:
+                cout << "\nHOW MANY STUDENTS DO YOU WANT TO ADD? : ";
+                cin >> y;
+                for (i = 0; i < y; i++) {
+                    b[i].open();
+                }
+                break;
+            case 2:
+                cout << "\nENTER YOUR ROLL NO: ";
+                cin >> j;
+
+                cout << "\nPress 1 for SEM 1";
+                cout << "\nPress 2 for SEM 2";
+                cout << "\nPress 3 for SEM 3";
+                cout << "\nPress 4 for SEM 4";
+                cout << "\nPress 5 for SEM 5";
+                cout << "\nPress 6 for SEM 6";
+                cout << "\nEnter your choice:";
+                cin >> ch;
+
+                switch (ch) {
+                    case 1:
+                        cout << "\nSem 1 Marks";
+                        for (i = 0; i < y; i++) {
+                            b[i].entry(j);
+                        }
+                        break;
+                    case 2:
+                        cout << "\nSem 2 Marks";
+                        for (i = 0; i < y; i++) {
+                            b[i].entry1(j);
+                        }
+                        break;
+                    case 3:
+                        cout << "\nSem 3 Marks";
+                        for (i = 0; i < y; i++) {
+                            b[i].entry2(j);
+                        }
+                        break;
+                    case 4:
+                        cout << "\nSem 4 Marks";
+                        for (i = 0; i < y; i++) {
+                            b[i].entry3(j);
+                        }
+                        break;
+                    case 5:
+                        cout << "\nSem 5 Marks";
+                        for (i = 0; i < y; i++) {
+                            b[i].entry4(j);
+                        }
+                        break;
+                    case 6:
+                        cout << "\nSem 6 Marks";
+                        for (i = 0; i < y; i++) {
+                            b[i].entry5(j);
+                        }
+                        break;
+                    default:
+                        cout << "\nInvalid choice";
+                }
+                break;
+            case 3:
+                for (i = 0; i < y; i++) {
+                    b[i].display();
+                }
+                break;
+            case 4:
+                cout << "\nENTER YOUR ROLL NO: ";
+                cin >> m;
+                for (i = 0; i < y; i++) {
+                    b[i].search(m);
+                }
+                break;
+            case 5:
+                break;
+            default:
+                cout << "\n*YOU HAVE PRESSED THE WRONG KEY * PLEASE TRY AGAIN***\n\n\n";
+                break;
+        }
+    } while (choice != 5);
+
+    return 0;
+}
